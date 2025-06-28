@@ -14,12 +14,20 @@ function addMaterial() {
   document.getElementById("materialPrice").value = "";
 }
 
+function deleteMaterial(name) {
+  delete materials[name];
+  updateMaterialList();
+}
+
 function updateMaterialList() {
   const list = document.getElementById("materialList");
   list.innerHTML = "";
   for (const [name, price] of Object.entries(materials)) {
     const li = document.createElement("li");
-    li.textContent = `${name} - $${price}`;
+    li.innerHTML = `
+      <span>${name} - $${price}</span>
+      <button onclick="deleteMaterial('${name}')">🗑️</button>
+    `;
     list.appendChild(li);
   }
 
