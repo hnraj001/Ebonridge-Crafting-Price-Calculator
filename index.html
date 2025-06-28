@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Business Price Calculator</title>
+  <title>RP Business Calculator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>📦 RP Business Price Calculator</h1>
+    <h1>📦 RP Business Calculator</h1>
 
-    <div class="input-group">
-      <label>Item Name</label>
-      <input type="text" id="itemName" placeholder="e.g. Horse Shoe" />
-    </div>
+    <section>
+      <h2>1️⃣ Add Materials</h2>
+      <input type="text" id="materialName" placeholder="Material name (e.g. Iron)" />
+      <input type="number" id="materialPrice" placeholder="Store price (e.g. 1)" step="0.01" />
+      <button onclick="addMaterial()">➕ Add Material</button>
+      <ul id="materialList"></ul>
+    </section>
 
-    <div class="input-group">
-      <label>Material 1 (name, quantity, store price)</label>
-      <input type="text" id="mat1Name" placeholder="e.g. Iron" />
-      <input type="number" id="mat1Qty" placeholder="Quantity" />
-      <input type="number" id="mat1Price" placeholder="Store Price" step="0.01" />
-    </div>
+    <section>
+      <h2>2️⃣ Add Items</h2>
+      <input type="text" id="itemName" placeholder="Item name (e.g. Horse Shoe)" />
+      <div id="itemMaterials"></div>
+      <button onclick="addItemMaterial()">➕ Add Material to Item</button>
+      <button onclick="saveItem()">✅ Save Item</button>
+      <ul id="itemList"></ul>
+    </section>
 
-    <div class="input-group">
-      <label>Material 2 (optional)</label>
-      <input type="text" id="mat2Name" placeholder="e.g. Wood" />
-      <input type="number" id="mat2Qty" placeholder="Quantity" />
-      <input type="number" id="mat2Price" placeholder="Store Price" step="0.01" />
-    </div>
-
-    <button onclick="calculatePrice()">💰 Calculate</button>
-
-    <div id="result" class="result"></div>
+    <section>
+      <h2>3️⃣ Calculate Item Prices</h2>
+      <div id="calculatedPrices"></div>
+    </section>
   </div>
 
   <script src="script.js"></script>
