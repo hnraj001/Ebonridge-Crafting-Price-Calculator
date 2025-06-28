@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Price Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📦 RP Business Price Calculator</h1>
+
+    <div class="input-group">
+      <label>Item Name</label>
+      <input type="text" id="itemName" placeholder="e.g. Horse Shoe" />
+    </div>
+
+    <div class="input-group">
+      <label>Material 1 (name, quantity, store price)</label>
+      <input type="text" id="mat1Name" placeholder="e.g. Iron" />
+      <input type="number" id="mat1Qty" placeholder="Quantity" />
+      <input type="number" id="mat1Price" placeholder="Store Price" step="0.01" />
+    </div>
+
+    <div class="input-group">
+      <label>Material 2 (optional)</label>
+      <input type="text" id="mat2Name" placeholder="e.g. Wood" />
+      <input type="number" id="mat2Qty" placeholder="Quantity" />
+      <input type="number" id="mat2Price" placeholder="Store Price" step="0.01" />
+    </div>
+
+    <button onclick="calculatePrice()">💰 Calculate</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
