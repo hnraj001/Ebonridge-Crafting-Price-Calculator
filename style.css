@@ -1,35 +1,46 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #1c1c1c;
-  color: #fff;
-  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  padding: 40px;
+  margin: 0;
 }
 
 .container {
-  max-width: 700px;
-  margin: 0 auto;
-  background: #2c2c2c;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255,0,0,0.4);
+  max-width: 800px;
+  margin: auto;
+  background: #2b2b2b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(216, 13, 13, 0.5);
 }
 
 h1 {
   text-align: center;
   color: #d80d0d;
+  margin-bottom: 30px;
 }
 
 h2 {
-  margin-top: 30px;
   color: #ff5a5a;
+  margin-top: 40px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
 }
 
 input, select {
-  padding: 8px;
-  margin: 5px;
-  width: calc(100% - 20px);
-  border-radius: 5px;
+  padding: 10px;
+  margin: 6px 0;
+  width: calc(100% - 22px);
+  border-radius: 6px;
   border: none;
+  background: #444;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #ccc;
 }
 
 button {
@@ -39,8 +50,9 @@ button {
   color: white;
   font-weight: bold;
   border-radius: 5px;
-  margin: 5px 0;
+  margin-top: 10px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 button:hover {
@@ -49,12 +61,38 @@ button:hover {
 
 ul {
   list-style: none;
-  padding-left: 10px;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 6px;
+  padding: 8px;
+  background: #383838;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background: #661818;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 .result-box {
-  margin-top: 10px;
+  margin-top: 12px;
   background: #141414;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1.05em;
+  border: 1px solid #333;
+}
+
+#itemMaterials > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
 }
